@@ -1,3 +1,8 @@
+/* An illustration of shared memory and of the general
+   idea of reduction common to many distributed algorithms.
+*/
+
+
 #include <math.h>
 #include "../Common/errors.h"
 
