@@ -1,5 +1,5 @@
-/* An illustration of the importance of synchronization between threads,
-   achieved via __syncthreads() in CUDA C.
+/* An illustration of shared memory and of the importance of synchronization 
+   between threads, achieved via __syncthreads() in CUDA C.
    
    Compile the code herewith as follows:
 
