@@ -50,6 +50,8 @@ int main(void)
   srand(time(NULL));
 
   cudaEvent_t start, stop;
+  float compute_time;
+   
   HANDLE_ERROR(cudaEventCreate(&start));
   HANDLE_ERROR(cudaEventRecord(start, 0));
   HANDLE_ERROR(cudaEventCreate(&stop));
@@ -86,6 +88,15 @@ int main(void)
 
   HANDLE_ERROR(cudaMemcpy(bitmap.pointer(), device_bitmap, bitmap.size(),
     cudaMemcpyDeviceToHost));
+   
+  HANDLE_ERROR(cudaEventRecord(stop, 0));
+  HANDLE_ERROR(cudaEventSynchronize(stop));
+  HANDLE_ERROR(cudaEventElapsedTime(&compute_time, start, stop));
+
+  printf("GPU compute time: %.1f ms\n", compute_time);
+
+  HANDLE_ERROR(cudaEventDestroy(start));
+  HANDLE_ERROR(cudaEventDestroy(stop));
 
   bitmap.display();
 
