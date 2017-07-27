@@ -1,4 +1,7 @@
-/* Compile as follows:
+/* An illustration of the importance of synchronization between threads,
+   achieved via __syncthreads() in CUDA C.
+   
+   Compile the code herewith as follows:
 
      $nvcc shared_memory_bitmap.cu -o shared_memory_bitmap.o -lGL -lGLU -lglut
 */
