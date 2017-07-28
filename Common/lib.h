@@ -79,10 +79,10 @@ __global__ void float_to_color(const float *float_ptr, uchar4 *uchar4_ptr)
 
   m1 = 2 * l - m2;
   
-  uchar4_ptr[0 + offset * 4] = value(m1, m2, hue + 120);
-  uchar4_ptr[1 + offset * 4] = value(m1, m2, hue);
-  uchar4_ptr[2 + offset * 4] = value(m1, m2, hue - 120);
-  uchar4_ptr[3 + offset * 4] = 255;
+  uchar4_ptr[offset].x = value(m1, m2, hue + 120);
+  uchar4_ptr[offset].y = value(m1, m2, hue);
+  uchar4_ptr[offset].z = value(m1, m2, hue - 120);
+  uchar4_ptr[offset].w = 255;
 }
 
 
