@@ -15,7 +15,7 @@ template<typename T> void swap(T& x, T& y)
 }
 
 
-__global__ unsigned char value(float x, float y, int hue)
+__device__ unsigned char value(float x, float y, int hue)
 {
   if (hue > 360)
     hue -= 360;
