@@ -4,7 +4,7 @@
 
    Compile as follows at the CLI:
 
-     nvcc heat_transfer_simulation.cu -o img.o -lGL -lGLU -lglut
+     nvcc heat_transfer_simulation.cu -o img_without_texture_memory.o -lGL -lGLU -lglut
 */
 
 
