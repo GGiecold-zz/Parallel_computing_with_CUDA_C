@@ -2,7 +2,7 @@
 #define __LIB_H__
 
 
-__global__ unsigned char value(float, float, int);
+__device__ unsigned char value(float, float, int);
 __global__ void float_to_color(const float *, unsigned char *);
 __global__ void float_to_color(const float *, uchar4 *);
 
