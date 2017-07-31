@@ -11,7 +11,7 @@
 
    As usual, compile through a call to
 
-     $nvcc gpu_heat_transfer.cu -o gpu_heat_transfer.o -lGL -lGLU -lglut
+     $nvcc gpu_heat_transfer.cu -o gpu_heat_transfer.out -lGL -lGLU -lglut
 */
 
 
