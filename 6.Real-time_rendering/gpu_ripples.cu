@@ -13,7 +13,7 @@
    
    Compile as follows:
 
-     $nvcc gpu_ripples.cu -o gpu_ripples.o -lGL -lGLU -lglut
+     $nvcc gpu_ripples.cu -o gpu_ripples.out -lGL -lGLU -lglut
 */
 
 
